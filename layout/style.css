@@ -339,6 +339,8 @@ body {
 	padding: 10px 48px 11px 70px;
 	text-transform: uppercase;
 	background-color: #2f53a3;
+	transition: all .5s ease;
+	letter-spacing: normal;
 	display: inline-block;
 	margin-bottom: 10px;
 	position: relative;
@@ -346,17 +348,35 @@ body {
 	font-weight: 700;
 	font-size: 16px;
 	color: #ffffff;
+	width: 300px;
+	height: 41px;
+}
+
+.third-section__facebook-join-button:active {
+	background-color: #b66eb0;
+}
+
+.third-section__facebook-join-button:hover {
+	padding: 10px 20px 11px 20px;
+	letter-spacing: 2px;
 }
 
 .third-section__facebook-join-button:before {
 	background-image: url(img/third-sect-facebook-icon.png);
+	transition: all .7s ease;
 	display: inline-block;
 	position: absolute;
 	height: 14px;
 	content: '';
 	left: 56px;
 	width: 6px;
+	opacity: 1;
 	top: 13px;
+}
+
+.third-section__facebook-join-button:hover:before {
+	opacity: 0;
+	left: 20px;
 }
 
 .third-section__devide {
@@ -418,6 +438,8 @@ body {
 .third-section__form-submit {
 	text-transform: uppercase;
 	background-color: #81398b;
+	transition: all .7s ease;
+	letter-spacing: normal;
 	border-radius: 4px;
 	font-weight: 700;
 	font-size: 16px;
@@ -427,10 +449,15 @@ body {
 	border: none;
 }
 
+.third-section__form-submit:hover {
+	letter-spacing: 5px;
+	color: yellow;
+}
+
 .fourth-section {
 	background: url(img/fourth-sect-bg-balls.png) no-repeat top center, url(img/fourth-sect-bg.png) no-repeat top center;
 	background-size: cover;
-	padding: 179px;
+	padding-top: 179px;
 	height: 730px;
 }
 
@@ -472,16 +499,19 @@ body {
 	background: #e22028 linear-gradient(to right, #e22028 0%, #f9b416 100%);
 	padding: 13px 25px 12px 25px;
 	text-transform: uppercase;
+	transition: all .75s ease;
+	letter-spacing: normal;
 	margin-bottom: 268px;
 	border-radius: 3px;
 	font-weight: 700;
 	font-size: 16px;
 	color: #ffffff;
-	transition: background .5s ease;
 }
 
 .fourth-section__button:hover {
-	background: #f9b416 linear-gradient(to right, #f9b416 0%, #e22028 100%);
+	color: rgba(59, 60, 90, 0.64);
+	letter-spacing: 5px;
+	border-radius: 23px;
 }
 
 .footer {
@@ -527,12 +557,19 @@ body {
 	border-radius: 0 4px 4px 0;
 	text-transform: uppercase;
 	background-color: #00cfae;
+	transition: all .7s ease;
 	letter-spacing: 0.8px;
 	padding: 10px 27px;
 	font-weight: 700;
 	font-size: 16px;
 	color: #fefefe;
 	border: none;
+}
+
+.footer__submit:hover {
+	background-color: rgba(157, 109, 184, 0.84);
+	color: rgba(252, 255, 134, 0.98);
+	letter-spacing: 2px;
 }
 
 .footer__links-wrapper {
@@ -550,14 +587,35 @@ body {
 }
 
 .footer__link {
+	transition: all .5s ease;
 	text-transform: uppercase;
+	position: relative;
 	font-weight: 700;
 	font-size: 16px;
+	padding: 10px 0;
 	color: #2f1946;
 }
 
 .footer__link:hover {
-	text-decoration: underline;
+	color: #00cfae;
+}
+
+.footer__link:after {
+	background-color: #00cfae;
+	transition: all .5s ease;
+	position: absolute;
+	margin: 0 auto;
+	bottom: 4px;
+	content: '';
+	width: 100%;
+	height: 2px;
+	opacity: 0;
+	right: 0;
+	left: 0;
+}
+
+.footer__link:hover:after {
+	opacity: 1;
 }
 
 .footer__countries {
